@@ -1,0 +1,7 @@
+############################## Regolith Linux #################################
+
+# first setup release flag
+/regolith/.config/regolith/flags/first-time-setup-*
+
+# ui fingerprint
+/regolith/.config/regolith/flags/ui-fingerprint

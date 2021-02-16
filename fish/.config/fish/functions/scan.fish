@@ -5,7 +5,6 @@ function scan --description 'Make a pdf look like scanned' --argument filename
   end
 
   convert -density 300 "$argv[1]" \
-    -alpha Off \
     -density 300 \
     -colorspace Gray \
     -blur 0.3x0.3 \

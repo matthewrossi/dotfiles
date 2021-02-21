@@ -17,6 +17,13 @@ If you want my `fish` configuration in your system, you can just:
     cd ~/.dotfiles
     stow fish
 
+Instead, if you want my `regolith` configuration, you should choose which one
+you want between `notebook` and `workstation`. If you want the `workstation`
+configuration, you should use:
+
+    cd ~/.dotfiles/regolith
+    stow -t ~ workstation
+
 [1]: https://www.gnu.org/software/stow/
 [2]: http://brandon.invergo.net/news/2012-05-26-using-gnu-stow-to-manage-your-dotfiles.html
 [3]: https://www.youtube.com/watch?v=CFzEuBGPPPg

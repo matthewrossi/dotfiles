@@ -8,8 +8,30 @@ gnome.wallpaper:		/usr/share/backgrounds/regolith-structure-7.png
 gnome.icon.theme:		Papirus-Dark
 rofi.icon-theme:		Papirus-Dark
 
+i3-wm.bar.font:	pango:JetBrains Mono Medium 12, Material Design Icons 12
+i3-wm.font:	pango:JetBrains Mono Medium 12
+i3-wm.workspace.01.name:	1:<span font_desc='JetBrains Mono Medium 12'> 1 </span>
+i3-wm.workspace.02.name:	2:<span font_desc='JetBrains Mono Medium 12'> 2 </span>
+i3-wm.workspace.03.name:	3:<span font_desc='JetBrains Mono Medium 12'> 3 </span>
+i3-wm.workspace.04.name:	4:<span font_desc='JetBrains Mono Medium 12'> 4 </span>
+i3-wm.workspace.05.name:	5:<span font_desc='JetBrains Mono Medium 12'> 5 </span>
+i3-wm.workspace.06.name:	6:<span font_desc='JetBrains Mono Medium 12'> 6 </span>
+i3-wm.workspace.07.name:	7:<span font_desc='JetBrains Mono Medium 12'> 7 </span>
+i3-wm.workspace.08.name:	8:<span font_desc='JetBrains Mono Medium 12'> 8 </span>
+i3-wm.workspace.09.name:	9:<span font_desc='JetBrains Mono Medium 12'> 9 </span>
+i3-wm.workspace.10.name:	10:<span font_desc='JetBrains Mono Medium 12'> 10 </span>
+i3-wm.workspace.11.name:	11:<span font_desc='JetBrains Mono Medium 12'> 11 </span>
+i3-wm.workspace.12.name:	12:<span font_desc='JetBrains Mono Medium 12'> 12 </span>
+i3-wm.workspace.13.name:	13:<span font_desc='JetBrains Mono Medium 12'> 13 </span>
+i3-wm.workspace.14.name:	14:<span font_desc='JetBrains Mono Medium 12'> 14 </span>
+i3-wm.workspace.15.name:	15:<span font_desc='JetBrains Mono Medium 12'> 15 </span>
+i3-wm.workspace.16.name:	16:<span font_desc='JetBrains Mono Medium 12'> 16 </span>
+i3-wm.workspace.17.name:	17:<span font_desc='JetBrains Mono Medium 12'> 17 </span>
+i3-wm.workspace.18.name:	18:<span font_desc='JetBrains Mono Medium 12'> 18 </span>
+i3-wm.workspace.19.name:	19:<span font_desc='JetBrains Mono Medium 12'> 19 </span>
+i3xrocks.value.font:		JetBrains Mono Medium 12
 gnome.terminal.font:		JetBrainsMono Nerd Font Mono 11
-rofi.font:			JetBrains Mono Medium 12
+rofi.font:			JetBrains Mono Medium 17
 rofi.theme:			/home/matt/.config/regolith/styles/lascaille/rofi.rasi
 
 i3xrocks.action.cpu-usage:	gnome-system-monitor --class=floating_window --show-processes-tab

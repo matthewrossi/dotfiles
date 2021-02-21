@@ -1,0 +1,16 @@
+#include "/etc/regolith/styles/lascaille/root"
+
+i3-wm.bar.position:		top
+i3-wm.bar.trayoutput:		primary
+
+gnome.wallpaper:		/usr/share/backgrounds/regolith-structure-7.png
+
+gnome.icon.theme:		Papirus-Dark
+rofi.icon-theme:		Papirus-Dark
+
+gnome.terminal.font:		JetBrainsMono Nerd Font Mono 11
+rofi.font:			JetBrains Mono Medium 12
+rofi.theme:			/home/matt/.config/regolith/styles/lascaille/rofi.rasi
+
+i3xrocks.action.cpu-usage:	gnome-system-monitor --class=floating_window --show-processes-tab
+i3xrocks.action.time:		gnome-calendar --class=floating_window

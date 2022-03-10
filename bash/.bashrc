@@ -132,8 +132,8 @@ if command -v fzf >/dev/null 2>&1; then
     # other distributions set up a symlink by running:
     # `ln -s /usr/bin/batcat ~/.local/bin/bat`
     if command -v bat >/dev/null 2>&1 && command -v tree >/dev/null 2>&1; then
-	export FZF_CTRL_T_OPTS="--select-1 --exit-0 --preview \"bash -c '(bat --style=plain --color=always --line-range :200 {} || tree -C {}) 2> /dev/null | head -200'\""
-        export FZF_ALT_C_OPTS="--select-1 --exit-0 --preview 'tree -C {} | head -200'"
+	export FZF_CTRL_T_OPTS="--select-1 --exit-0 --preview \"bash -c '(bat --style=plain --color=always --line-range :200 {} || tree -aC {}) 2> /dev/null | head -200'\""
+        export FZF_ALT_C_OPTS="--select-1 --exit-0 --preview 'tree -aC {} | head -200'"
     fi
 
     source /usr/share/doc/fzf/examples/key-bindings.bash

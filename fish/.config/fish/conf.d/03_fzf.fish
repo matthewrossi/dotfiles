@@ -1,9 +1,25 @@
 # Fuzzy finder
 
+# TODO: investigate why key-bindings are not working with fish
+
 # Use fd when it is installed
-if command -sq fd; or command -sq fdfind
-    set -gx FZF_DEFAULT_COMMAND 'fd --type f'
+if command -sq fd
+    set -gx FZF_DEFAULT_COMMAND 'fd'
+    set -gx FZF_CTRL_T_COMMAND 'fd'
+    set -gx FZF_ALT_C_COMMAND 'fd -t d'
 end
+
+# use bat and tree to show a preview of files and directories
+# NOTE: Ubuntu/Debian install `bat` as `batcat`, to be consistent with
+# other distributions set up a symlink by running:
+# `ln -s /usr/bin/batcat ~/.local/bin/bat`
+if command -sq bat; and command -sq tree
+    set -gx FZF_CTRL_T_OPTS "--select-1 --exit-0 --preview \"bash -c \'(bat --style=plain --color=always --line-range :200 {} || tree -C {}) 2> /dev/null | head -200'\""
+    set -gx FZF_ALT_C_OPTS "--select-1 --exit-0 --preview 'tree -C {} | head -200'"
+end
+
+source /usr/share/doc/fzf/examples/key-bindings.fish
+
 # Use Nord color scheme
 set -agx FZF_DEFAULT_OPTS '
 --color fg:#D8DEE9,bg:#2E3440,hl:#A3BE8C,fg+:#D8DEE9,bg+:#434C5E,hl+:#A3BE8C

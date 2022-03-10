@@ -119,16 +119,36 @@ fi
 # configure fzf
 if command -v fzf >/dev/null 2>&1; then
     # use fd instead of find when possible
+    # NOTE: Ubuntu/Debian install `fd` as `fdfind`, to be consistent with other
+    # distributions set up a symlink: `ln -s /usr/bin/fdfind ~/.local/bin/fd`
     if command -v fd >/dev/null 2>&1; then
-	export FZF_DEFAULT_COMMAND="fd --type f"
-        export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
-        export FZF_ALT_C_COMMAND="$FZF_DEFAULT_COMMAND"
+	export FZF_DEFAULT_COMMAND='fd'
+	export FZF_CTRL_T_COMMAND='fd'
+	export FZF_ALT_C_COMMAND='fd -t d'
     fi
-    # use Nord color scheme
-    export FZF_DEFAULT_OPTS="$FZF_DEFAULT_OPTS
-        --color fg:#D8DEE9,bg:#2E3440,hl:#A3BE8C,fg+:#D8DEE9,bg+:#434C5E,hl+:#A3BE8C
-	--color pointer:#BF616A,info:#4C566A,spinner:#4C566A,header:#4C566A,prompt:#81A1C1,marker:#EBCB8B"
+
+    # use bat and tree to show a preview of files and directories
+    # NOTE: Ubuntu/Debian install `bat` as `batcat`, to be consistent with
+    # other distributions set up a symlink by running:
+    # `ln -s /usr/bin/batcat ~/.local/bin/bat`
+    if command -v bat >/dev/null 2>&1 && command -v tree >/dev/null 2>&1; then
+	export FZF_CTRL_T_OPTS="--select-1 --exit-0 --preview \"bash -c '(bat --style=plain --color=always --line-range :200 {} || tree -C {}) 2> /dev/null | head -200'\""
+        export FZF_ALT_C_OPTS="--select-1 --exit-0 --preview 'tree -C {} | head -200'"
+    fi
 
     source /usr/share/doc/fzf/examples/key-bindings.bash
     source /usr/share/doc/fzf/examples/completion.bash
+
+    # use Nord color scheme
+    export FZF_DEFAULT_OPTS=$FZF_DEFAULT_OPTS'
+        --color fg:#D8DEE9,bg:#2E3440,hl:#A3BE8C,fg+:#D8DEE9,bg+:#434C5E,hl+:#A3BE8C
+	--color pointer:#BF616A,info:#4C566A,spinner:#4C566A,header:#4C566A,prompt:#81A1C1,marker:#EBCB8B'
+fi
+
+# configure bat
+if command -v bat >/dev/null 2>&1; then
+    # show line numbers and Git modifications
+    export BAT_STYLE='plain'
+    # use Nord color scheme
+    export BAT_THEME='Nord'
 fi

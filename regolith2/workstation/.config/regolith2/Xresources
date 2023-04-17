@@ -1,0 +1,12 @@
+gnome.terminal.font:		JetBrainsMono Nerd Font Mono 11
+
+i3-wm.bar.position:         top
+i3-wm.bar.trayoutput:		primary
+
+i3xrocks.action.cpu-usage:	gnome-system-monitor --class=floating_window --show-processes-tab
+i3xrocks.action.time:		gnome-calendar --class=floating_window
+
+regolith.look.path:                     /usr/share/regolith-look/lascaille
+regolith.lockscreen.wallpaper.file:     /usr/share/backgrounds/regolith-structure-7.png
+regolith.wallpaper.file:                /usr/share/backgrounds/regolith-structure-7.png
+

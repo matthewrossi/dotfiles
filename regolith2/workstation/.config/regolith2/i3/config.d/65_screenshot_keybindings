@@ -1,0 +1,18 @@
+## Screenshot // Selection to File // Print ##
+bindsym --release Print exec --no-startup-id "gnome-screenshot -a"
+
+## Screenshot // Selection to Clipboard // <Ctrl> Print ##
+bindsym --release Ctrl+Print exec --no-startup-id "gnome-screenshot -acf /tmp/gnome-screenshot && cat /tmp/gnome-screenshot | xclip -selection clipboard -target image/png"
+
+## Screenshot // Window to File // <Shift> Print ##
+bindsym --release Shift+Print exec --no-startup-id "gnome-screenshot -w"
+
+## Screenshot // Window to Clipboard // <Ctrl><Shift> Print ##
+bindsym --release Ctrl+Shift+Print exec --no-startup-id "gnome-screenshot -wcf /tmp/gnome-screenshot && cat /tmp/gnome-screenshot | xclip -selection clipboard -target image/png"
+
+## Screenshot // All to File// <> Print ##
+bindsym --release $mod+Print exec --no-startup-id "gnome-screenshot"
+
+## Screenshot // All to Clipboard // <><Ctrl> Print ##
+bindsym --release $mod+Ctrl+Print exec --no-startup-id "gnome-screenshot -cf /tmp/gnome-screenshot && cat /tmp/gnome-screenshot | xclip -selection clipboard -target image/png"
+

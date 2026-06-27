@@ -1,0 +1,19 @@
+gnome.terminal.font:    JetBrainsMono Nerd Font Mono 11
+
+wm.bar.position:        top
+wm.bar.trayoutput:      primary
+
+wm.binding.settings:    s
+
+wm.program.settings:    regolith-control-center --class=floating_window
+wm.program.display:     regolith-control-center --class=floating_window display
+wm.program.wifi:        regolith-control-center --class=floating_window wifi
+wm.program.bluetooth:   regolith-control-center --class=floating_window bluetooth
+
+i3xrocks.action.cpu-usage:	gnome-system-monitor --class=floating_window --show-processes-tab
+i3xrocks.action.time:		gnome-calendar --class=floating_window
+
+regolith.look.path:                     /usr/share/regolith-look/lascaille
+regolith.lockscreen.wallpaper.file:     /usr/share/backgrounds/regolith-structure-7.png
+regolith.wallpaper.file:                /usr/share/backgrounds/regolith-structure-7.png
+
